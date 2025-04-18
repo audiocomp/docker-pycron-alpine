@@ -33,15 +33,6 @@ jobs:
           VERSION=$(cat VERSION)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          sbom: true
-          provenance: mode=max
-          tags: audiocomp/pycron-alpine:latest
-
       - name: Build and push Docker image with version tag
         uses: docker/build-push-action@v6
         with:
@@ -49,4 +40,4 @@ jobs:
           push: true
           sbom: true
           provenance: mode=max
-          tags: audiocomp/pycron-alpine:${{ env.VERSION }}
+          tags: audiocomp/pycron:${{ env.VERSION }}-alpine
