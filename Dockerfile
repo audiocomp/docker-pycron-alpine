@@ -1,8 +1,8 @@
-FROM python:3.13-alpine
+FROM python:3.14-alpine3.23
 LABEL maintainer="Steve Brown https://github.com/audiocomp"
 
 # Update base image and install dependencies
-RUN apk update && apk upgrade --no-cache -v && apk add --no-cache -v gcc libc-dev make git libcap ca-certificates busybox-openrc logrotate openssl rsyslog wget
+RUN apk update && apk upgrade --no-cache --available -v && apk add --no-cache -v gcc libc-dev make git libcap ca-certificates busybox-openrc logrotate openssl rsyslog wget
 
 # Update PIP and install required packages
 COPY requirements.txt /tmp/requirements.txt
