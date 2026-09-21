@@ -7,7 +7,7 @@ This is a generic python docker used to run custom scripts and what not.  [Docke
 
 ## Usage
 
-Please note that this docker uses python:3.13-alpine and has the following packages installed:
+Please note that this docker uses python:3.14-alpine and has the following packages installed:
 
 ```sh
 busybox-openrc

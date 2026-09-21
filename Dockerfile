@@ -1,4 +1,4 @@
-FROM python:3.14-alpine3.23
+FROM python:3.14-alpine3.24
 LABEL maintainer="Steve Brown https://github.com/audiocomp"
 
 # Update base image and install dependencies
